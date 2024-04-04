@@ -1,0 +1,31 @@
+<div class="col-md-10 ps-4">
+    <p class="fs-2 mt-4">Forms</p>
+    <p>Đây là một trang thêm</p>
+    <div class="card p-3 shadow">
+        <h5 class="card-title">Basic form</h5>
+        <form>
+            <label for="name">Tên sản phẩm:</label><br>
+            <input type="text" ng-model="inputValue.name" class="form-control col-6" required><br>
+            <span ng-show="check.name==true" style="color: red;">Vui lòng nhập tên và là chữ!</span><br>
+            <label for="categoryID">Danh mục:</label><br>
+
+            <select ng-model="inputValue.categoryID" class="form-select" required>
+                <option value="">-- Chọn một tùy chọn --</option>
+                <option ng-repeat="category in categories" value="{{ category.id }}">{{ category.name_category }}</option>
+            </select>
+            
+
+            <span ng-show="check.categoryID==true" style="color: red;">Vui lòng chọn danh mục!</span><br>
+           
+            <label for="date">Giá sản phẩm:</label><br>
+            <input type="text" ng-model="inputValue.price" class="form-control" required><br>
+            <span ng-show="check.price==true" style="color: red;">Vui lòng nhập giá sản phẩm và phải là số!</span><br>
+            <label for="price">Số lượng:</label><br>
+            <input type="text" ng-model="inputValue.quantity" class="form-control" required><br>
+            <span ng-show="check.quantity==true" style="color: red;">Vui lòng nhập số lượng và số lượng phải là số!</span><br>
+
+            <!-- <button ng-click="addController()">Thêm</button> -->
+            <button ng-click="update()" class="btn btn-primary">Sửa sản phẩm</button>
+        </form>
+    </div>
+</div>

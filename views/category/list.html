@@ -1,0 +1,27 @@
+<div class="col-md-10 ps-4">
+    <p class="fs-2 mt-4">Tables</p>
+    <p>Đây là một trang hiển thị</p>
+    <div class="card p-3 shadow">
+        <h5 class="card-title">Basic Table</h5>
+        <table class="table ">
+
+            <tr>
+                <th>ID danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Chức năng</th>
+            </tr>
+
+
+            <tr ng-repeat="ct in category">
+                <td>{{ct.id}}</td>
+                <td>{{ct.name_category}}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="getID(ct.id)">Update</button>
+                    <button class="btn btn-danger" ng-click="deleteCategory(ct.id)">Delete</button>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>

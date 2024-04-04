@@ -1,0 +1,16 @@
+<div class="col-md-10 ps-4">
+    <p class="fs-2 mt-4">Forms</p>
+    <p>Đây là một trang thêm danh mục</p>
+    <div class="card p-3 shadow">
+        <h5 class="card-title">Basic form</h5>
+        <form>
+            <label for="name">Tên danh mục:</label><br>
+            <input type="text" ng-model="inputValue.name_category" class="form-control col-6" required><br>
+            <span ng-show="check.name_category==true" style="color: red;">Vui lòng nhập tên danh mục!</span><br>
+            
+
+            <!-- <button ng-click="addController()">Thêm</button> -->
+            <button ng-click="addCategory()" class="btn btn-primary">Thêm danh mục</button>
+        </form>
+    </div>
+</div>
